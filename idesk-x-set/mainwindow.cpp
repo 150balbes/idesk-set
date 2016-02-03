@@ -97,7 +97,7 @@ void MainWindow::on_pushButton_Save_clicked()
             fileSet.close();
 
             m_process = new QProcess(this);
-            QString str_prog = "kill -s SIGUSR1 $(pgrep idesk)";
+            QString str_prog = "kill -s 16 $(pgrep idesk)";
             m_process->start(str_prog);
         }
 }
