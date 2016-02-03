@@ -94,11 +94,11 @@ void MainWindow::on_pushButton_Save_clicked()
             str_check = "end\n";
             writeStream << str_check;
             fileSet.close();
+
+            char *prog = "kill -s SIGUSR1 $(pgrep idesk)";
+            system(prog);
+
         }
-
-
-    char *prog = "kill -s SIGUSR1 $(pidof idesk)";
-    system(prog);
 }
 
 void MainWindow::on_pushButton_Command_clicked()
