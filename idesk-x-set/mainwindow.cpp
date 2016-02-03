@@ -97,7 +97,7 @@ void MainWindow::on_pushButton_Save_clicked()
         }
 
 
-    char *prog = "kill -s SIGUSR1 <pidof idesk";
+    char *prog = "kill -s SIGUSR1 $(pidof idesk)";
     system(prog);
 }
 
