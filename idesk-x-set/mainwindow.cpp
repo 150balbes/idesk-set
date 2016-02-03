@@ -3,6 +3,7 @@
 #include <QFileDialog>
 #include <QFile>
 #include <QTextStream>
+#include <QProcess>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -95,9 +96,9 @@ void MainWindow::on_pushButton_Save_clicked()
             writeStream << str_check;
             fileSet.close();
 
-            char *prog = "kill -s SIGUSR1 $(pgrep idesk)";
-            system(prog);
-
+            m_process = new QProcess(this);
+            QString str_prog = "kill -s SIGUSR1 $(pgrep idesk)";
+            m_process->start(str_prog);
         }
 }
 

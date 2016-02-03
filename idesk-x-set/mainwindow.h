@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QProcess>
 
 namespace Ui {
 class MainWindow;
@@ -30,6 +31,7 @@ private:
     Ui::MainWindow *ui;
     QString str_dir_set;
     QString str_file_set;
+    QProcess*  m_process;
 };
 
 #endif // MAINWINDOW_H
