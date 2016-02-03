@@ -95,6 +95,10 @@ void MainWindow::on_pushButton_Save_clicked()
             writeStream << str_check;
             fileSet.close();
         }
+
+
+    char *prog = "kill -s SIGUSR1 <pidof idesk";
+    system(prog);
 }
 
 void MainWindow::on_pushButton_Command_clicked()
