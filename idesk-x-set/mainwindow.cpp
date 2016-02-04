@@ -114,8 +114,3 @@ void MainWindow::on_pushButton_Icon_clicked()
     ui->Idesk_Icon->setText(str);
 }
 
-void MainWindow::on_pushButton_clicked()
-{
-    char *prog = "kill -s 10 $(pidof idesk)";
-    system(prog);
-}

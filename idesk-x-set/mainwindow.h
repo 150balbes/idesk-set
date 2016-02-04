@@ -26,8 +26,6 @@ private slots:
 
     void on_pushButton_Icon_clicked();
 
-    void on_pushButton_clicked();
-
 private:
     Ui::MainWindow *ui;
     QString str_dir_set;
