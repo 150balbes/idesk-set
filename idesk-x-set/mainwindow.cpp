@@ -3,7 +3,7 @@
 #include <QFileDialog>
 #include <QFile>
 #include <QTextStream>
-#include <QProcess>
+#include <signal.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -96,9 +96,9 @@ void MainWindow::on_pushButton_Save_clicked()
             writeStream << str_check;
             fileSet.close();
 
-            m_process = new QProcess(this);
-            QString str_prog = "kill -s 16 $(pgrep idesk)";
-            m_process->start(str_prog);
+            char *prog = "kill -s 10 $(pidof idesk)";
+            system(prog);
+
         }
 }
 
@@ -112,4 +112,10 @@ void MainWindow::on_pushButton_Icon_clicked()
 {
     QString str = QFileDialog::getOpenFileName(0, "Open Dialog", ui->Idesk_Icon->text(),"*.png *.jpg *.jpeg");
     ui->Idesk_Icon->setText(str);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    char *prog = "kill -s 10 $(pidof idesk)";
+    system(prog);
 }
