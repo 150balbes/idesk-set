@@ -20,7 +20,7 @@ private slots:
 
     void on_pushButton_Desktop_clicked();
 
-    void on_pushButton_Save_clicked();
+    void on_pushButton_Create_clicked();
 
     void on_pushButton_Command_clicked();
 

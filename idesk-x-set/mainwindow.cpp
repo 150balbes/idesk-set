@@ -2,7 +2,9 @@
 #include "ui_mainwindow.h"
 #include <QFileDialog>
 #include <QFile>
+#include <QDir>
 #include <QTextStream>
+#include <QPixmap>
 #include <signal.h>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -18,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent) :
         QDir dir;
         dir.mkdir(str_dir_set);
     }
+    ui->pushButton_Create->hide();
 }
 
 MainWindow::~MainWindow()
@@ -53,18 +56,23 @@ void MainWindow::on_pushButton_Desktop_clicked()
                 {
                     QString str_3 = "/usr/share/icons/hicolor/48x48/apps/" + str_2 + ".png";
                     ui->Idesk_Icon->setText(str_3);
+
+                    QPixmap myPixmap(str_3);
+                    ui->label_prev->setScaledContents(1);
+                    ui->label_prev->setPixmap(myPixmap);
                 }
                 else if (str_1.startsWith("Name="))
                 {
                     ui->Idesk_Caption->setText(str_2);
                     ui->Idesk_CaptionTip->setText(str_2);
                 }
+                ui->pushButton_Create->show();
             }
         }
 
 }
 
-void MainWindow::on_pushButton_Save_clicked()
+void MainWindow::on_pushButton_Create_clicked()
 {
     if (ui->Idesk_Caption->text() != "")
         {
@@ -96,6 +104,9 @@ void MainWindow::on_pushButton_Save_clicked()
             writeStream << str_check;
             fileSet.close();
 
+            ui->pushButton_Create->hide();
+            ui->Desktop->clear();
+
             char *prog = "kill -s 10 $(pidof idesk)";
             system(prog);
 
@@ -112,5 +123,8 @@ void MainWindow::on_pushButton_Icon_clicked()
 {
     QString str = QFileDialog::getOpenFileName(0, "Open Dialog", ui->Idesk_Icon->text(),"*.png *.jpg *.jpeg");
     ui->Idesk_Icon->setText(str);
-}
 
+    QPixmap myPixmap(str);
+    ui->label_prev->setScaledContents(1);
+    ui->label_prev->setPixmap(myPixmap);
+}
