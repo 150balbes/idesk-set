@@ -117,11 +117,6 @@
         <string>Высота</string>
        </property>
       </widget>
-      <zorder>Idesk_Width</zorder>
-      <zorder>Idesk_Height</zorder>
-      <zorder>label_2</zorder>
-      <zorder>label_3</zorder>
-      <zorder>label_prev</zorder>
      </widget>
      <widget class="QGroupBox" name="groupBox_4">
       <property name="geometry">
@@ -289,10 +284,10 @@
         </rect>
        </property>
        <property name="maximum">
-        <number>800</number>
+        <number>1024</number>
        </property>
        <property name="value">
-        <number>640</number>
+        <number>770</number>
        </property>
       </widget>
       <widget class="QSpinBox" name="Idesk_Y">
