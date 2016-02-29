@@ -110,8 +110,8 @@ void MainWindow::on_pushButton_del_clicked()
                 file.remove();
                 setList_icon();
 
-                char *prog = "kill -s 10 $(pidof idesk)";
-                system(prog);
+//                char *prog = "kill -s 10 $(pidof idesk)";
+//                system(prog);
             }
     }
 }
@@ -119,6 +119,7 @@ void MainWindow::on_pushButton_del_clicked()
 void MainWindow::setList_icon()
 {
     QStringList listFile = QDir(str_dir_set).entryList(QDir::Files);
+    ui->List_icon->clear();
     foreach (QString file, listFile) {
         ui->List_icon->addItem(file);
     }
