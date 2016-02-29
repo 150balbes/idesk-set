@@ -99,10 +99,16 @@ void MainWindow::on_pushButton_del_clicked()
 
     if (n == QMessageBox::Yes)
     {
-            QMessageBox msgBox;
-            msgBox.setText("Эта функция пока не работает. ");
-            msgBox.move(400, 300);
-            msgBox.exec();
+//            QMessageBox msgBox;
+//            msgBox.setText("Эта функция пока не работает. ");
+//            msgBox.move(400, 300);
+//            msgBox.exec();
+            QString str = ui->List_icon->currentText();
+            QFile file(str_dir_set + "/" + str);
+            if(file.exists())
+            {
+                file.remove();
+            }
     }
 }
 
@@ -161,7 +167,7 @@ void MainWindow::on_pushButton_edit_clicked()
         }
        QString str = ui->Idesk_Icon->text();
        setIcon_pix(str);
-//       ui->pushButton_Save->show();
+
     }
 }
 
