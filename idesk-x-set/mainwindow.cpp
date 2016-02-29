@@ -108,6 +108,10 @@ void MainWindow::on_pushButton_del_clicked()
             if(file.exists())
             {
                 file.remove();
+                setList_icon();
+
+                char *prog = "kill -s 10 $(pidof idesk)";
+                system(prog);
             }
     }
 }
