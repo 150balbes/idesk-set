@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Idesk-set
+Name[ru]=Idesk-set
+GenericName=Idesk-set
+GenericName[ru]=Настройка Idesk
+Comment=Settings icon Idesk
+Comment[ru]=Настройка иконок Idesk
+Exec=idesk-set %U
+Type=Application
+Icon=idesk-set
+Categories=Application;System;Utility;Core;

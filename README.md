@@ -1,2 +1,2 @@
-# idesk-x-set
+# idesk-set
 Utilit for idesk

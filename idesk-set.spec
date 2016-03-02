@@ -1,4 +1,4 @@
-Name:		idesk-x-set
+Name:		idesk-set
 Version:	0.0.2
 Release:	alt3
 Summary:	Graphical idesk-x settings
@@ -16,7 +16,7 @@ BuildRequires: gcc-c++ libqt4-devel desktop-file-utils
 Requires: qt4-styles-qtcurve
 
 %description
-Graphical application for Idesk-x
+Graphical application for Idesk
 
 %prep
 %setup -q
@@ -38,6 +38,9 @@ install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
 %_liconsdir/*
 
 %changelog
+* Tue Mar 02 2016 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt3
+- new ver
+
 * Tue Mar 02 2016 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt3
 - edit del icon
 
