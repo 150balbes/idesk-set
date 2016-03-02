@@ -99,10 +99,6 @@ void MainWindow::on_pushButton_del_clicked()
 
     if (n == QMessageBox::Yes)
     {
-//            QMessageBox msgBox;
-//            msgBox.setText("Эта функция пока не работает. ");
-//            msgBox.move(400, 300);
-//            msgBox.exec();
             QString str = ui->List_icon->currentText();
             QFile file(str_dir_set + "/" + str);
             if(file.exists())
@@ -110,8 +106,8 @@ void MainWindow::on_pushButton_del_clicked()
                 file.remove();
                 setList_icon();
 
-//                char *prog = "kill -s 10 $(pidof idesk)";
-//                system(prog);
+                char *prog = "kill -s 10 $(pidof idesk)";
+                system(prog);
             }
     }
 }

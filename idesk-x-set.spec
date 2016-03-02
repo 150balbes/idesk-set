@@ -1,6 +1,6 @@
 Name:		idesk-x-set
 Version:	0.0.2
-Release:	alt2
+Release:	alt3
 Summary:	Graphical idesk-x settings
 
 License:	GPL
@@ -38,6 +38,9 @@ install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
 %_liconsdir/*
 
 %changelog
+* Tue Mar 02 2016 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt3
+- edit del icon
+
 * Tue Feb 29 2016 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt2
 - add del icon
 
