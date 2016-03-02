@@ -36,6 +36,7 @@ private:
     QString str_file_set;
     void setList_icon();
     void setIcon_pix(QString &str);
+    void Icon_clear();
 };
 
 #endif // MAINWINDOW_H

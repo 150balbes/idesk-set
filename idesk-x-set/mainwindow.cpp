@@ -231,5 +231,15 @@ void MainWindow::on_pushButton_Save_clicked()
             system(prog);
 
             setList_icon();
+            Icon_clear();
 
+}
+
+void MainWindow::Icon_clear()
+{
+ ui->Idesk_Caption->clear();
+ ui->Idesk_CaptionTip->clear();
+ ui->Idesk_Command->clear();
+ ui->Idesk_Icon->clear();
+ ui->label_prev->clear();
 }
