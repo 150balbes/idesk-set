@@ -325,6 +325,12 @@ void MainWindow::setIdesk_def()
         } else if (str.startsWith("SnapOrigin:")) {
             str = str.mid(12);
             ui->IdeskSet_SnapOrigin->setText(str);
+
+        } else if (str.startsWith("SnapShadowTrans:")) {
+            str = str.mid(17);
+            ui->IdeskSet_SnapShadowTrans->setValue(str.toInt());
+
+
         } else if (str.startsWith("CaptionOnHover:")) {
             str = str.mid(16);
             ui->IdeskSet_CaptionOnHover->setText(str);
@@ -464,6 +470,10 @@ void MainWindow::on_pushButton_clicked()
 
     str_check = "  SnapOrigin: " + ui->IdeskSet_SnapOrigin->text() + "\n";
     writeStream << str_check;
+
+    str_check = "  SnapShadowTrans: " + ui->IdeskSet_SnapShadowTrans->text() + "\n";
+    writeStream << str_check;
+
     str_check = "  CaptionOnHover: " + ui->IdeskSet_CaptionOnHover->text() + "\n";
     writeStream << str_check;
     str_check = "  CaptionTipOnHover: " + ui->IdeskSet_CaptionTipOnHover->text() + "\n";
