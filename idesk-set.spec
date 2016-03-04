@@ -1,6 +1,6 @@
 Name:		idesk-set
 Version:	0.0.2
-Release:	alt3
+Release:	alt4
 Summary:	Graphical idesk-x settings
 
 License:	GPL
@@ -38,7 +38,7 @@ install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
 %_liconsdir/*
 
 %changelog
-* Tue Mar 02 2016 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt3
+* Tue Mar 04 2016 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt4
 - new ver
 
 * Tue Mar 02 2016 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt3

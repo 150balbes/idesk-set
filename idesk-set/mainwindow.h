@@ -30,12 +30,16 @@ private slots:
 
     void on_pushButton_Save_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString str_dir_set;
     QString str_file_set;
+
     void setList_icon();
     void setIcon_pix(QString &str);
+    void setIdesk_def();
     void Icon_clear();
 };
 
