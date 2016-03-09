@@ -536,3 +536,10 @@ void MainWindow::on_pushButton_clicked()
     system(prog);
 
 }
+
+void MainWindow::on_pushButton_FileWall_clicked()
+{
+    QString str = QFileDialog::getOpenFileName(0, "Open Dialog", ui->IdeskSet_Background_File->text(),"*.png *.jpg *.jpeg");
+    ui->IdeskSet_Background_File->setText(str);
+//    setIcon_pix(str);
+}

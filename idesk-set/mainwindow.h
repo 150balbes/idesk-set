@@ -32,6 +32,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushButton_FileWall_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString str_dir_set;
